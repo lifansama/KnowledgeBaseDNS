@@ -51,7 +51,7 @@ Make a POST request for the following URL with the given params to generate the 
 | **grant_type** | Must be `password`                                               |
 | **username**   | Account email                                                    |
 | **password**   | Account password                                                 |
-| mfa_token      | Two-Factor authentication token (if enabled in account settings) |
+| mfa_token      | Two-factor authentication token (if enabled in account settings) |
 
 In the response, you will get both `access_token` and `refresh_token`.
 
@@ -94,7 +94,7 @@ Make the following POST request with the given params to get a new access token:
 | Parameter           | Description                                                         |
 |:--------------------|:--------------------------------------------------------------------|
 | **grant_type**      | Must be `refresh_token`                                             |
-| **refresh_token**   | `REFRESH TOKEN` using which a new access token has to be generated. |
+| **refresh_token**   | `REFRESH TOKEN` used to generate a new access token. |
 
 ##### Request example
 
@@ -181,9 +181,9 @@ Location: REDIRECT_URI#access_token=...&token_type=Bearer&expires_in=3600&state=
 
 :::warning
 
-To access this endpoint, you need to contact us at **devteam@adguard.com**.
-Please describe the reason and use cases for this endpoint, as well as provide the redirect URI.
-Upon approval, you will receive a unique client identifier, which should be used for the **client_id** parameter.
+To access this endpoint, please contact us at **devteam@adguard.com**.
+In your message, please describe the reason for and use cases of this endpoint, and provide the redirect URI.
+Once approved, you will receive a unique client identifier to use for the **client_id** parameter.
 
 :::
 

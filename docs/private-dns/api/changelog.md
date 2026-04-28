@@ -22,7 +22,7 @@ This article contains the changelog for [AdGuard DNS API](private-dns/api/overvi
 ## v1.12 (11 March 2026)
 
 - Added new safebrowsing settings fields:
-    - `blocking_mode_settings` — allows configuring a custom blocking mode (default, REFUSED, NXDOMAIN, or custom IP-address) specifically for safebrowsing
+    - `blocking_mode_settings` — allows configuring a custom blocking mode (default, REFUSED, NXDOMAIN, or custom IP address) specifically for safebrowsing
     - `typosquatting_protection_enabled` — enables protection against typosquatting domains
 
 ## v1.11
