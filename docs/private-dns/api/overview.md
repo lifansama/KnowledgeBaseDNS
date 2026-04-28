@@ -18,7 +18,7 @@ AdGuard DNS provides a REST API you can use to integrate your apps with it.
 
 When included in the request header, API keys can be used to authorize requests to User API.
 
-##### Request example
+#### Request example
 
 ```bash
 $ curl 'https://api.adguard-dns.io/oapi/v1/devices' -i -X GET \
@@ -33,7 +33,7 @@ To issue or revoke API keys, go to the [corresponding subsection](https://adguar
 
 When included in the request header, access tokens can be used to authorize requests to User API.
 
-##### Request example
+#### Request example
 
 ```bash
 $ curl 'https://api.adguard-dns.io/oapi/v1/devices' -i -X GET \
@@ -167,7 +167,7 @@ To inform the authorization server which grant type to use, the **response_type*
 
 - For the Implicit grant, use **response_type=token** to include an access token.
 
-A successful response is **302 Found**, which triggers a redirect to **redirect_uri** (which is a request parameter). 
+A successful response is **302 Found**, which triggers a redirect to **redirect_uri** (which is a request parameter).
 The response parameters are embedded in the fragment component (the part after the `#` symbol) of the `redirect_uri` in the *Location* header.
 
 For example:
@@ -187,7 +187,7 @@ Upon approval, you will receive a unique client identifier, which should be used
 
 :::
 
-The Authorization Code + PKCE flow is the **recommended integration method** for new clients. 
+The Authorization Code + PKCE flow is the **recommended integration method** for new clients.
 It is designed for public clients (single-page apps, mobile apps) and does not require a client secret.
 
 **Step 1: Generate a code verifier and code challenge**
@@ -195,7 +195,7 @@ It is designed for public clients (single-page apps, mobile apps) and does not r
 Generate a cryptographically random `code_verifier` (43–128 characters),
 then compute:
 
-```
+``` text
 code_challenge = BASE64URL(SHA256(ASCII(code_verifier)))
 ```
 
@@ -237,7 +237,7 @@ Location: REDIRECT_URI?code=AUTH_CODE&state=RANDOM_STATE
 | **code_verifier** | Yes | The original code verifier generated in Step 1 |
 | **redirect_uri** | Yes | Must match the `redirect_uri` used in Step 2 |
 
-##### Request example
+#### Request example
 
 ```bash
 $ curl 'https://api.adguard-dns.io/oapi/v1/oauth_token' -i -X POST \
